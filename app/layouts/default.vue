@@ -1,20 +1,29 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div class="flex flex-col h-screen w-screen">
-    <main
-      class="flex-1 overflow-x-auto  [&::-webkit-scrollbar]:w-2
-  [&::-webkit-scrollbar-track]:rounded-full
-  [&::-webkit-scrollbar-track]:bg-gray-100
-  [&::-webkit-scrollbar-thumb]:rounded-full
-  [&::-webkit-scrollbar-thumb]:bg-gray-300
-  dark:[&::-webkit-scrollbar-track]:bg-gray-700
-  dark:[&::-webkit-scrollbar-thumb]:bg-gray-500"
-    >
+  <div class="flex flex-col w-screen h-screen dark:bg-black bg-zinc-200">
+    <div class="absolute left-0 top-0 w-screen h-screen">
       <slot />
-    </main>
-    <!-- <AppFooter /> -->
+    </div>
+    <div class="particles-container absolute left-0 top-0 w-screen h-screen object-cover">
+      <Particles
+        :particle-count="250"
+        :particle-spread="10"
+        :speed="0.1"
+        :particle-colors="isDark ? ['#b67ba8'] : ['#b6b68a']"
+        :move-particles-on-hover="true"
+        :particle-hover-factor="1"
+        :alpha-particles="false"
+        :particle-base-size="100"
+        :size-randomness="1"
+        :camera-distance="20"
+        :disable-rotation="true"
+      />
+    </div>
   </div>
 </template>
+
+<style>
+.particles-container {
+  position: relative;
+  overflow: hidden;
+}
+</style>

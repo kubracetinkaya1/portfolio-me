@@ -8,11 +8,13 @@ declare global {
     name: string
     url: string
     icon: string
+    description?: string
   }
   export interface SocialItem {
     name: string
     url: string
-    icon?: string
+    icon: string
+    description?: string
   }
   export interface SocialsFile {
     socials: SocialItem[]

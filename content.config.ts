@@ -4,6 +4,7 @@ const linksItem = z.object({
   name: z.string(),
   link: z.string(),
   icon: z.string().optional(),
+  description: z.string().optional(),
 })
 
 export default defineContentConfig({
