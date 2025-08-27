@@ -8,7 +8,7 @@
         :particle-count="250"
         :particle-spread="10"
         :speed="0.1"
-        :particle-colors="isDark ? ['#b67ba8'] : ['#b6b68a']"
+        :particle-colors="isDark ? ['#d69aba'] : ['#8c8c8c']"
         :move-particles-on-hover="true"
         :particle-hover-factor="1"
         :alpha-particles="false"
