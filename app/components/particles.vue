@@ -15,7 +15,7 @@ interface ParticlesProps {
   disableRotation?: boolean
   className?: string
 }
-
+//
 const props = withDefaults(defineProps<ParticlesProps>(), {
   particleCount: 200,
   particleSpread: 10,
