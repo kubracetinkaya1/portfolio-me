@@ -1,10 +1,22 @@
+<script setup lang="ts">
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+</script>
+
 <template>
   <div class="fixed left-0 top-0 w-screen h-screen flex flex-col">
     <div class="absolute left-0 top-0 flex flex-col w-full h-full z-9999">
       <AppHeader />
-
       <div
-        class="flex-1 w-full overflow-y-auto md:overflow-y-hidden scroll-smooth scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200"
+        class="flex-1 w-full scroll-smooth"
+        :class="[
+          route.name === 'home'
+            ? 'overflow-y-auto md:overflow-y-hidden scrollbar-thin'
+            : route.name === 'project'
+              ? 'overflow-y-auto md:scrollbar-hidden scrollbar-thin'
+              : 'overflow-y-hidden',
+        ]"
       >
         <slot />
       </div>
@@ -43,5 +55,11 @@
 .scrollbar-thin::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+  .md\:scrollbar-hidden::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 </style>
