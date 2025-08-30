@@ -19,4 +19,10 @@ declare global {
   export interface SocialsFile {
     socials: SocialItem[]
   }
+  export interface Project {
+    name: string
+    description: string
+    icon: string
+    link: string
+  }
 }

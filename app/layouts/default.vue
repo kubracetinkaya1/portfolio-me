@@ -1,9 +1,12 @@
 <template>
-  <div class="flex flex-col w-screen h-screen dark:bg-black bg-zinc-200">
-    <div class="absolute left-0 top-0 w-screen h-screen">
-      <slot />
+  <div class="fixed left-0 top-0 w-screen h-screen flex flex-col">
+    <div class="absolute left-0 top-0 flex flex-col w-full z-9999">
+      <AppHeader />
+      <div class="flex flex-col w-full h-full">
+        <slot />
+      </div>
     </div>
-    <div class="particles-container absolute left-0 top-0 w-screen h-screen object-cover">
+    <div class="particles-container">
       <Particles
         :particle-count="250"
         :particle-spread="10"
@@ -23,6 +26,8 @@
 
 <style>
 .particles-container {
+   width: 100%;
+    height: 100%;
   position: relative;
   overflow: hidden;
 }

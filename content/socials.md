@@ -24,4 +24,5 @@ links:
       link: 'mailto:kubracetiinnkaya@gmail.com'
       icon: 'lucide:mail'
       description: 'kubracetiinnkaya@gmail.com'
+      clickable: true
 ---
