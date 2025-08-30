@@ -2,7 +2,10 @@
   <div class="fixed left-0 top-0 w-screen h-screen flex flex-col">
     <div class="absolute left-0 top-0 flex flex-col w-full h-full z-9999">
       <AppHeader />
-      <div class="flex-1 w-full overflow-y-scroll scroll-smooth">
+
+      <div
+        class="flex-1 w-full overflow-y-auto md:overflow-y-hidden scroll-smooth scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200"
+      >
         <slot />
       </div>
     </div>
@@ -32,5 +35,13 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 2px;
 }
 </style>
