@@ -6,20 +6,18 @@ const route = useRoute()
 
 <template>
   <div class="fixed left-0 top-0 w-screen h-screen flex flex-col">
-    <div class="absolute left-0 top-0 flex flex-col w-full h-full z-9999">
+    <div
+      class="absolute left-0 top-0 flex flex-col w-full h-full z-9999 scroll-smooth"
+      :class="[
+        route.name === 'home'
+          ? 'overflow-y-auto md:overflow-y-hidden scrollbar-thin'
+          : route.name === 'project'
+            ? 'overflow-y-auto md:scrollbar-hidden scrollbar-thin'
+            : 'overflow-y-auto',
+      ]"
+    >
       <AppHeader />
-      <div
-        class="flex-1 w-full scroll-smooth"
-        :class="[
-          route.name === 'home'
-            ? 'overflow-y-auto md:overflow-y-hidden scrollbar-thin'
-            : route.name === 'project'
-              ? 'overflow-y-auto md:scrollbar-hidden scrollbar-thin'
-              : 'overflow-y-hidden',
-        ]"
-      >
-        <slot />
-      </div>
+      <slot />
     </div>
 
     <div class="particles-container">
