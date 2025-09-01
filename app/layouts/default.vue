@@ -5,9 +5,9 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="fixed left-0 top-0 w-screen h-screen flex flex-col">
+  <div class="absolute inset-0 w-screen h-screen flex flex-col">
     <div
-      class="absolute left-0 top-0 flex flex-col w-full h-full z-9999 scroll-smooth"
+      class="absolute inset-0 flex flex-col w-full h-full z-9999 scroll-smooth"
       :class="[
         route.name === 'home'
           ? 'overflow-y-auto md:overflow-y-hidden scrollbar-thin'
@@ -51,7 +51,6 @@ const route = useRoute()
   width: 4px;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: #888;
   border-radius: 2px;
 }
 
@@ -59,5 +58,8 @@ const route = useRoute()
   .md\:scrollbar-hidden::-webkit-scrollbar {
     width: 0px;
   }
+}
+.scroll-smooth-ios {
+  -webkit-overflow-scrolling: touch;
 }
 </style>
