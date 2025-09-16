@@ -15,11 +15,6 @@ links:
       icon: 'lucide:twitter'
       description:
 
-    - name: 'Instagram'
-      link: 'https://www.instagram.com/kubracetinkaya__/'
-      icon: 'lucide:instagram'
-      description:
-
     - name: 'E-mail'
       link: 'mailto:kubracetiinnkaya@gmail.com'
       icon: 'lucide:mail'
