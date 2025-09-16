@@ -2,7 +2,7 @@
 projects:
   webProjects:
     - name: 'GİTHUB'
-      description: 'Aradğınız filmleri bulabilirsiniz.'
+      description: 'Projelerimi görüntüleyebilirsiniz.'
       icon: 'lucide:clapperboard'
       link: 'https://github.com/kubracetinkaya1'
 ---
