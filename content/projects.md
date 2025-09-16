@@ -1,7 +1,7 @@
 ---
 projects:
   webProjects:
-    - name: 'GİTHUB'
+    - name: 'Github'
       description: 'Projelerimi görüntüleyebilirsiniz.'
       icon: 'lucide:clapperboard'
       link: 'https://github.com/kubracetinkaya1'
